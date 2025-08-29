@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { HeroSection } from "@/components/sintagma/HeroSection";
+import { ProblemSection } from "@/components/sintagma/ProblemSection";
+import { SolutionSection } from "@/components/sintagma/SolutionSection";
+import { HowItWorksSection } from "@/components/sintagma/HowItWorksSection";
+import { BenefitsSection } from "@/components/sintagma/BenefitsSection";
+import { ComparisonSection } from "@/components/sintagma/ComparisonSection";
+import { SecuritySection } from "@/components/sintagma/SecuritySection";
+import { TestimonialsSection } from "@/components/sintagma/TestimonialsSection";
+import { ForWhomSection } from "@/components/sintagma/ForWhomSection";
+import { PricingSection } from "@/components/sintagma/PricingSection";
+import { FAQSection } from "@/components/sintagma/FAQSection";
+import { FinalCTASection } from "@/components/sintagma/FinalCTASection";
+import { Footer } from "@/components/sintagma/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <HowItWorksSection />
+      <BenefitsSection />
+      <ComparisonSection />
+      <SecuritySection />
+      <TestimonialsSection />
+      <ForWhomSection />
+      <PricingSection />
+      <FAQSection />
+      <FinalCTASection />
+      <Footer />
+    </main>
   );
 };
 
