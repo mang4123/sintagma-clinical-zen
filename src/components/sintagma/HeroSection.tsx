@@ -1,65 +1,78 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-professional.jpg";
+import sintagmaLogo from "@/assets/sintagma-logo.png";
+import gradientElement1 from "@/assets/gradient-element-1.png";
+import gradientElement2 from "@/assets/gradient-element-2.png";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-subtle opacity-20"></div>
+    <section className="relative min-h-screen bg-gradient-to-br from-primary-light/20 via-white to-secondary-light/20 overflow-hidden pt-20">
+      {/* Background decorative elements */}
+      <div className="absolute top-10 left-10 w-96 h-96 opacity-30">
+        <img
+          src={gradientElement1}
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 opacity-25">
+        <img
+          src={gradientElement2}
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
       
-      <div className="relative container mx-auto px-4 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
+      <div className="relative container mx-auto px-4 py-20">
+        <div className="text-center space-y-12 max-w-4xl mx-auto">
+          
+          {/* Main Headlines */}
           <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Para Psicólogos, Psiquiatras e Nutricionistas:
-                <span className="block text-secondary-light mt-4">
-                  "Seu Raciocínio Clínico é Seu Maior Ativo."
-                </span>
-              </h1>
-              
-              <p className="text-xl lg:text-2xl text-primary-light leading-relaxed">
-                Com o SINTAGMA, liberte-o da burocracia e transforme cada consulta em um 
-                prontuário impecável para uma prática de excelência.
-              </p>
-              
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-                <p className="text-lg text-white">
-                  O futuro da sua clínica chegou. SINTAGMA: a Inteligência Artificial que 
-                  eleva sua acurácia diagnóstica, blinda sua prática com segurança inabalável 
-                  e redefine o que é ser um clínico confiante, ético e verdadeiramente presente.
-                </p>
-              </div>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-primary bg-clip-text text-transparent leading-tight">
+              Atendimentos mais humanos, gestão mais simples.
+            </h1>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="lg" className="text-lg px-8 py-6">
-                Experimente Grátis por 7 Dias!
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 transition-all duration-300">
-                Assista à Demonstração
-              </Button>
-            </div>
+            <h2 className="text-2xl md:text-3xl text-foreground font-medium">
+              <img
+                src={sintagmaLogo}
+                alt="SINTAGMA"
+                className="inline-block h-8 md:h-10 mx-2"
+              />
+              cuida da burocracia, e você do paciente.
+            </h2>
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Desenvolvido por profissionais de saúde mental para profissionais de saúde mental: 
+              gestão intuitiva, segurança total e tudo em um só lugar!
+            </p>
           </div>
           
-          {/* Image */}
-          <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-strong">
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <Button 
+              size="lg" 
+              className="bg-gradient-primary text-white px-12 py-6 text-lg rounded-full shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+            >
+              Experimente agora e veja como é simples transformar sua rotina!
+            </Button>
+          </div>
+          
+          {/* Hero Image/Visual */}
+          <div className="relative max-w-2xl mx-auto mt-16">
+            <div className="relative rounded-3xl overflow-hidden shadow-strong bg-gradient-to-br from-white to-primary-light/10">
               <img
                 src={heroImage}
-                alt="Profissional de saúde mental usando SINTAGMA"
+                alt="Profissional usando SINTAGMA"
                 className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-            </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-full font-semibold shadow-medium animate-bounce">
-              IA Segura
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-white text-primary px-4 py-2 rounded-full font-semibold shadow-medium">
-              LGPD Compliant
+              
+              {/* Overlay with product preview */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
+              
+              {/* Floating badge */}
+              <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-primary shadow-medium">
+                IA Segura & LGPD
+              </div>
             </div>
           </div>
         </div>

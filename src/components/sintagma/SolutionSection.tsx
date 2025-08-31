@@ -1,118 +1,156 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, Shield, Brain, Clock, TrendingUp, BookOpen } from "lucide-react";
-import transformationImage from "@/assets/transformation-visual.jpg";
+import sintagmaLogo from "@/assets/sintagma-logo.png";
 
 export const SolutionSection = () => {
-  const benefits = [
-    {
-      icon: Brain,
-      title: "Transforme seu Prontuário em Ferramenta de Decisão",
-      description: "Não é uma obrigação, é um aliado que te devolve clareza e sustenta seu raciocínio clínico."
-    },
-    {
-      icon: Sparkles,
-      title: "Garanta Acuidade e Profundidade",
-      description: "Tenha acesso a todos os detalhes e nuances da consulta, organizados e analisados por uma IA treinada com o melhor das expertises clínicas."
-    },
-    {
-      icon: Shield,
-      title: "Blinde Sua Prática com Segurança Inabalável",
-      description: "Com criptografia de ponta a ponta e total conformidade com a LGPD, seus registros são invioláveis."
-    },
-    {
-      icon: Clock,
-      title: "Liberte Sua Mente para o Essencial",
-      description: "A IA cuida dos registros, para que você possa focar 100% na escuta, no acolhimento e na relação terapêutica."
-    },
-    {
-      icon: BookOpen,
-      title: "Atualize Sua Prática Automaticamente",
-      description: "Imagine um sistema que, além de organizar, ainda te envia artigos, leituras e estudos com base nas queixas do seu paciente."
-    }
-  ];
-
   return (
-    <section className="py-20 bg-white">
+    <section id="solucao" className="py-20 bg-gradient-to-br from-primary-light/10 to-secondary-light/10">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            <span className="text-primary">SINTAGMA:</span> Onde a Inteligência Artificial 
-            <span className="block mt-2">Pensa COM Você, para que Você Possa Pensar Melhor</span>
-          </h2>
+        <div className="max-w-5xl mx-auto space-y-16">
           
-          <div className="bg-primary-light rounded-2xl p-8 mb-8">
-            <p className="text-lg text-foreground leading-relaxed">
-              <strong>SINTAGMA</strong> significa a arte de dar forma e sentido a conjuntos de palavras, 
-              transformando-as em unidades coesas que revelam a estrutura fundamental de uma ideia, 
-              de uma emoção, da própria narrativa de um ser. E é exatamente isso que nosso aplicativo 
-              faz com suas consultas.
+          {/* Section Header */}
+          <div className="text-center space-y-8">
+            <h2 className="text-3xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <img
+                src={sintagmaLogo}
+                alt="SINTAGMA"
+                className="inline-block h-12 md:h-16 mx-3"
+              />
+              <br className="md:hidden" />
+              Onde a Inteligência Artificial Pensa COM Você
+            </h2>
+            
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              para que Você Possa Pensar Melhor.
             </p>
           </div>
-          
-          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-            Desenvolvido por profissionais de saúde mental para profissionais de saúde mental, 
-            o SINTAGMA vai muito além de um simples 'organizador de agenda' ou 'gerador de lero-lero' 
-            tecnológico.
-          </p>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <img
-                src={transformationImage}
-                alt="Transformação de áudio em prontuário inteligente"
-                className="w-full h-auto rounded-2xl shadow-medium"
-              />
-            </div>
-            
-            <div className="text-left space-y-6">
-              <div className="bg-secondary-light rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-secondary mb-4">
-                  A tecnologia já não é mais 'futuro distante'
-                </h3>
-                <p className="text-foreground">
-                  O teleatendimento, antes criticado, virou regra e impulsionou muitas práticas. 
-                  A Inteligência Artificial é o presente, e sua adoção, uma questão de 
-                  responsabilidade profissional.
-                </p>
-              </div>
+
+          {/* Key Message */}
+          <div className="bg-white/70 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-medium border border-white/50">
+            <div className="space-y-6 text-center">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                <strong>SINTAGMA</strong> significa a arte de dar forma e sentido a conjuntos de palavras, 
+                transformando-as em unidades coesas que revelam a estrutura fundamental de uma ideia, 
+                de uma emoção, da própria narrativa de um ser.
+              </p>
               
-              <div className="bg-accent rounded-2xl p-6">
-                <p className="text-lg font-semibold text-primary mb-2">
-                  "Nós não criamos um lugar pra anotar."
-                </p>
-                <p className="text-foreground">
-                  Criamos um espaço para raciocinar com ética, profundidade e direção. 
-                  O SINTAGMA é a ferramenta que te eleva da operação à estratégia.
-                </p>
-              </div>
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                E é exatamente isso que nosso aplicativo faz com suas consultas.
+              </p>
             </div>
           </div>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="bg-gradient-subtle rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105">
-              <div className="flex items-center mb-4">
-                <div className="p-3 bg-primary/10 rounded-full mr-4">
-                  <benefit.icon className="w-6 h-6 text-primary" />
+
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl shadow-soft">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-gradient-primary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
+                    🎯
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                      Transforme seu Prontuário em Ferramenta de Decisão
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Não é uma obrigação, é um aliado que te devolve clareza e sustenta seu raciocínio clínico.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">{benefit.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+
+              <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl shadow-soft">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-gradient-primary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
+                    🔍
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                      Garanta Acuidade e Profundidade
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Tenha acesso a todos os detalhes e nuances da consulta, organizados e analisados 
+                      por uma IA treinada com o melhor das expertises clínicas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl shadow-soft">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-gradient-primary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
+                    🛡️
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                      Blinde Sua Prática com Segurança Inabalável
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Com criptografia de ponta a ponta e total conformidade com a LGPD, 
+                      seus registros são invioláveis.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
-        
-        <div className="text-center bg-gradient-primary rounded-2xl p-12 shadow-strong">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-2xl font-bold text-white mb-4">
-              "Você não está sendo substituído. Você está sendo sustentado."
-            </p>
-            <p className="text-xl text-primary-light leading-relaxed">
-              O SINTAGMA não veio ocupar o seu lugar, veio te devolver o seu tempo – 
-              seu único bem findável.
-            </p>
-            <Button variant="cta" size="lg" className="text-lg px-8 py-6">
+
+            <div className="space-y-6">
+              <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl shadow-soft">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-gradient-secondary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
+                    ⚡
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                      Liberte Sua Mente para o Essencial
+                    </h3>
+                    <p className="text-muted-foreground">
+                      A IA cuida dos registros, para que você possa focar 100% na escuta, 
+                      no acolhimento e na relação terapêutica – o que você é insubstituível.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl shadow-soft">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-gradient-secondary w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
+                    📚
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                      Atualize Sua Prática Automaticamente
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Imagine um sistema que, além de organizar, ainda te envia artigos, 
+                      leituras e estudos com base nas queixas do seu paciente.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-2xl border border-primary/20">
+                <h3 className="text-xl font-bold text-foreground mb-3 text-center">
+                  Você não está sendo substituído. Você está sendo sustentado.
+                </h3>
+                <p className="text-muted-foreground text-center">
+                  <img
+                    src={sintagmaLogo}
+                    alt="SINTAGMA"
+                    className="inline-block h-6 mx-2"
+                  />
+                  não veio ocupar o seu lugar, veio te devolver o seu tempo – 
+                  seu único bem findável.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              className="bg-gradient-primary text-white px-8 py-4 rounded-full shadow-strong hover:shadow-glow transition-all duration-300"
+            >
               Transforme Sua Prática Agora!
             </Button>
           </div>

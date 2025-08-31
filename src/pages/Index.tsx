@@ -1,3 +1,4 @@
+import { Header } from "@/components/sintagma/Header";
 import { HeroSection } from "@/components/sintagma/HeroSection";
 import { ProblemSection } from "@/components/sintagma/ProblemSection";
 import { SolutionSection } from "@/components/sintagma/SolutionSection";
@@ -14,21 +15,24 @@ import { Footer } from "@/components/sintagma/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <HowItWorksSection />
-      <BenefitsSection />
-      <ComparisonSection />
-      <SecuritySection />
-      <TestimonialsSection />
-      <ForWhomSection />
-      <PricingSection />
-      <FAQSection />
-      <FinalCTASection />
-      <Footer />
-    </main>
+    <>
+      <Header />
+      <main className="min-h-screen">
+        <HeroSection />
+        <ProblemSection />
+        <SolutionSection />
+        <HowItWorksSection />
+        <BenefitsSection />
+        <ComparisonSection />
+        <SecuritySection />
+        <TestimonialsSection />
+        <ForWhomSection />
+        <PricingSection />
+        <FAQSection />
+        <FinalCTASection />
+        <Footer />
+      </main>
+    </>
   );
 };
 
